@@ -18,10 +18,7 @@ export default function TextForm(props) {
       props.showAlert("lowercase has been activated", "success");
 
   };
-  // const handleCapClick = () => {
-  //   const lower = word.toLowerCase();
-  //   return lower.charAt(0).toUpperCase() + lower.slice(1);
-  // };---not working
+  
   const speak = () => {
     let msg = new SpeechSynthesisUtterance();
     msg.text = text;
@@ -46,9 +43,7 @@ export default function TextForm(props) {
     props.showAlert("text has been reversed", "success");
 
   };
-  //  const handelDecClick = () => {
-  //    setDecoration({ textDecoration: "line-through" });
-  //  };
+  
   
   return (
     <>
@@ -77,12 +72,7 @@ export default function TextForm(props) {
         >
           Convert to Lowercase
         </button>
-        {/* <button
-          className="btn btn-warning fw-bolder mb-3 text-white rounded-pill mx-2"
-          onClick={handleCapClick}
-        >
-          Capitalize CaSe
-        </button> */}
+        
         <button
           type="submit"
           onClick={speak}
@@ -108,12 +98,7 @@ export default function TextForm(props) {
         >
           Reverse words
         </button>
-        {/* <button
-          className="btn btn-warning fw-bolder mb-3 text-white rounded-pill mx-2"
-          onClick={handelDecClick}
-        >
-          Decoration
-        </button> */}
+       
       </div>
       <div className="container">
         <h1 className="text-warning fw-bolder">Text Summary</h1>
