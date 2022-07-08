@@ -105,34 +105,9 @@ background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
 .state--title {
   text-align: center;
 }
-.counter-count {
-  border: 1px solid rgb(116, 16, 16);
-  border-radius: 80px;
-  padding: 40px 40px;
-  background-color: rgb(147, 22, 22);
-  text-align: center;
-}
-.counter-minus {
-  background-color: rgb(63, 63, 147);
-  color: white;
-  border-radius: 30px;
-  padding: px;
-  transform: translate(16px, 12px);
-}
-.counter-plus {
-  background-color: rgb(63, 63, 147);
-  color: white;
-  border-radius: 30px;
-  padding: px;
-  transform: translate(16px, -14px);
-}
-.counter {
-  transform: rotate(90deg);
-}
-.meme--image {
-  max-width: 100%;
-  text-align: center;
-}
+
+
+
 .btn--img {
   border: 1px solid rgb(116, 16, 16);
   border-radius: 8px;
@@ -197,6 +172,5 @@ background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
   padding: 0px 24px;
 }
 a {
-
   text-decoration: none;
 }
