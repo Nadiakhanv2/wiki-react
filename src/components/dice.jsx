@@ -40,16 +40,7 @@ export default function Dice() {
     <div className="main-body w-50 container">
       <div className="tenzie-cnt h-400">
         <div className="dice-container pd-100 px-5">
-          {/* <TenziesGame value="1" />
-          <TenziesGame value="2" />
-          <TenziesGame value="3" />
-          <TenziesGame value="4" />
-          <TenziesGame value="5" />
-          <TenziesGame value="6" />
-          <TenziesGame value="7" />
-          <TenziesGame value="8" />
-          <TenziesGame value="9" />
-          <TenziesGame value="10" /> */}
+          
           {diceElements}
         </div>
         <div className=" py-2 text-center">
