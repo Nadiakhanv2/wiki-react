@@ -9,7 +9,7 @@ const links = props.links;
 const navItems = [];
 
 for (let i = 0; i < links.length; i++) {
-  navItems.push(<Link to={`/${links[i][1]}`}>{links[i][0]}</Link>);
+  navItems.push(<a href={`/${links[i][1]}`}>{links[i][0]}</a>);
   
 }
   
@@ -22,7 +22,6 @@ for (let i = 0; i < links.length; i++) {
       <div className="col-2">
         <a href="#" className="fs-4 fw-bold ms-5">
           <span>{props.headerfirst}</span>
-          {/* <span>{props.headerlast}</span> */}
         </a>
       </div>
       <div className="col-8">
