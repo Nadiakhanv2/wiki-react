@@ -40,8 +40,7 @@ export default function Dice() {
     <div className="main-body w-50 container">
       <div className="tenzie-cnt h-400">
         <div className="dice-container pd-100 px-5">
-          
-          {diceElements}
+                    {diceElements}
         </div>
         <div className=" py-2 text-center">
           <button onClick={rollDice} className="roll--dice ">
