@@ -1,25 +1,48 @@
 
+// import { Link } from "react-router-dom";
+
+
 export default function Header(props) {
+
+const links = props.links;
+
+const navItems = [];
+
+for (let i = 0; i < links.length; i++) {
+  navItems.push(<Link to={`/${links[i][1]}`}>{links[i][0]}</Link>);
+  
+}
+  
   return (
     <header
-      className={`d-flex align-items-center px-2 py-2 header bg-${props.mode} text-${props.mode === `light`?`dark`:`light`}`}
+      className={`d-flex align-items-center px-2 py-2 header bg-${
+        props.mode
+      } text-${props.mode === `light` ? `dark` : `light`}`}
     >
-      <div className="col-4">
-        <img
-          src="https://www.logolynx.com/images/logolynx/64/6434117060654972bd19ca515db70158.jpeg"
-          alt="meme-logo"
-          className="header--image"
-          width={65}
-        />
+      <div className="col-2">
+        <a href="#" className="fs-4 fw-bold ms-5">
+          <span>{props.headerfirst}</span>
+          {/* <span>{props.headerlast}</span> */}
+        </a>
       </div>
-      <h1 className="header--title col-3 text-center">Meme Generator</h1>
-      <h2 className="header--project col-3 text-center">
-        react course-project
-      </h2>
+      <div className="col-8">
+        <a className="secondary-links header--project fs-3">{navItems}</a>
+      </div>
+
       <div className="form-check form-switch col-2">
-         <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>
-        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
-       </div> 
+        <input
+          className="form-check-input"
+          type="checkbox"
+          id="flexSwitchCheckDefault"
+          onClick={props.toggleMode}
+        />
+        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+          Enable Dark Mode
+        </label>
+      </div>
     </header>
   );
 }
+
+
+     

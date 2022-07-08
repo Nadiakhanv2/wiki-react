@@ -37,7 +37,7 @@
   }
 }
 .header {
-  height: 65px;
+  height: 70px;
   
   color: #fff;
   box-shadow: 5px gray;
@@ -192,4 +192,11 @@ background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
 }
 .die--num {
   font-size: 2rem;
+}
+.secondary-links > a {
+  padding: 0px 24px;
+}
+a {
+
+  text-decoration: none;
 }

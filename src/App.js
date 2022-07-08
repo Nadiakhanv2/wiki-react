@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import Header from "./components/header";
 import Dice from "./components/dice";
 import TextForm from "./components/TextForm";
@@ -23,6 +23,7 @@ export default function App() {
     if (mode === `light`) {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
+
       showAlert("Dark mode has been anabled", "success");
     } else {
       setMode("light");
@@ -31,47 +32,34 @@ export default function App() {
     }
   };
   return (
-    <div className="">
-      <Header mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
 
-      
-      <hr />
-      <Dice />
-      <hr />
-      <TextForm heading="Enter the Text" showAlert={showAlert} />
-    </div>
+    <>
+      <Header
+        mode={mode}
+        headerfirst="WIKI"
+        links={[
+          ["Dice", "/"],
+          ["TextForm", "/TextForm"],
+          ["Featured", "#featured"],
+          ["Blog", "/blog"],
+          ["Pages", "/pages"],
+        ]}
+        iconLinks={[
+          ["fa fa-icon", "/address"],
+          ["About", "/about"],
+          ["Featured", "#featured"],
+          ["Blog", "/blog"],
+          ["Pages", "/pages"],
+        ]}
+        toggleMode={toggleMode}
+      />
+      <Alert alert={alert} />
+      <div className="">
+            <Dice />
+            <TextForm heading="Enter the Text" showAlert={showAlert} />
+      </div>
+    </>
   );
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function App() {
-//   return (
-//     <div className="App">
-      
-//     </div>
-//   );
-// }
-
-// export default App;
